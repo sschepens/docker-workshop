@@ -1,0 +1,12 @@
+application:
+  image: ubuntu-nodejs
+  ports:
+    - "8888:8888"
+  links:
+    - mongodb
+mongodb:
+  image: ubuntu-mongo
+  volumes:
+    - "/data:/data/db"
+  ports:
+    - "27017:27107"
